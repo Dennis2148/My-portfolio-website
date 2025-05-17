@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denntoz web</title>
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <!--custom css file link-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<style>
+    
+:root{
+    --yellow:#f9ca24;
+}
+.navbar{
+ font-family: Arial,sans-serif;
+margin: 0; padding: 0;
+box-sizing: border-box;
+text-decoration: none;
+outline: none; border: none;
+text-transform: capitalize;
+transition: all .2s linear;
+    }
+    ::selection{
+        background:var(--yellow);
+        color: #333;
+    }
+    html{
+        font-size: 70.5%;
+        overflow-x: hidden;
+    }
+    html::-webkit-scrollbar{
+      width:1.4rem;
+    }
+     
+    html::-webkit-scrollbar-track{
+      background:#222;
+    }
+    html::-webkit-scrollbar-thumb{
+      background:var(--yellow);
+    }
+    body{
+        background:#111;
+        overflow-x: hidden;
+        padding-left: 35rem;
+    }
+
+section{
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.btn{
+    padding:.7rem 3rem;
+    background: #fff;
+    color: var(--yellow);
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 2rem;
+    border-radius: 5rem;
+    
+}
+
+.btn i{
+    padding: 0 .5rem;
+    font-size: 1.8rem;
+}
+
+.btn:hover{
+    background:var(--black);
+}
+
+
+
+header{
+    position: fixed;
+    top:o; left:0;
+    z-index: 1000;
+    height: 100%;
+    width:35rem;
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+
+}
+
+
+    
+
+
+header .user img{
+    height: 16rem;
+    width: 16rem;
+    border-radius: 50%;
+    object-fit:cover;
+    margin-top: 20px;
+    border:1rem solid var(--yellow);
+}
+header .user .name{
+    font-size: 3.5rem;
+    color: #fff;
+}
+header .user .post{
+    font-size: 2rem;
+    color: #eee;
+}
+header .navbar{
+    width: 100%
+}
+header .navbar ul{
+    list-style: none;
+    padding:1rem 2rem;
+}
+header .navbar ul li a{
+    display:block;
+    padding: 1rem;
+    margin: 1.3rem 0;
+    background: #333;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 5rem;
+    text-decoration: none;
+}
+header .navbar ul li a:hover{
+    background: var(--yellow) ;
+}
+#menu{
+    position: fixed;
+    top: 2rem; right: 2rem;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.3rem;
+    padding: 1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+    
+    
+}
+
+.logo{
+    width: 230px;
+    height: 40px;
+    margin-left: 700px;
+    margin-top: 0px;
+    position: fixed;
+}
+
+.home{
+    display: flex;
+    justify-content:center;
+    flex-flow: column;
+    padding: 0 14rem;
+}
+.home h3{
+    color: #fff;
+    font-size: 3rem;
+}
+
+.home h1{
+    font-size: 2.5rem;
+    color:#fff;
+}
+
+.home h1 span{
+    color:var(--yellow);
+
+}
+
+
+
+.home p{
+    font-size: 2rem;
+    color:#eee;
+    padding: 1rem 0;
+}
+
+p span{
+    color: var(--yellow)
+
+}
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+
+.home{
+    padding: 1rem 4rem;
+}
+
+
+
+@media (max-width: 990px){
+header{
+    left:-120%;
+}
+#menu{
+    display: block;
+    background-color: #f9ca24;
+}
+}
+header.toggle{
+    
+left:-0%;
+}
+
+body{
+    padding: 0;
+}
+
+
+}
+
+
+@media (max-width: 40px){
+header{
+    width: 100vw
+}
+}
+
+.all{
+    display: flex;
+}
+
+.btn{
+    margin-left: 90px;
+    width: 130px;
+    padding: 10px;
+}
+.aboutdiv{
+    color: #fff;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 48rem;
+     text-decoration: none;
+    flex:1 1 48;
+    max-width: 600px;
+    
+}
+
+
+
+.name{
+    color: yellow;
+}
+.age{
+    color: yellow;
+}
+.post{
+    color: yellow;
+}
+.language{
+    color: yellow;
+}
+
+.box{
+    color: #fff;
+    font-size: 26px;
+    box-sizing: border-box;
+    background-color: #3f3232;
+    margin-top: 30px;
+    padding-top: 10px;
+
+    
+   
+} 
+
+
+
+
+
+
+
+.edubtn{
+    color: black;
+    font-size: 20px;
+    background-color: #fff;
+    margin-left: 20%;
+    border-radius: 4rem;
+    padding: 10px 5px;
+    cursor: pointer;
+    color: var(--yellow)
+    
+
+}
+    
+.edubtn:hover{
+    background:var(--black);
+}
+
+.edubox{
+
+    margin-top: 30px;
+    
+    
+}
+
+
+
+.edu{
+    background-color: #3f3232;;
+    box-sizing: border-box;
+    color: #fff;
+    display: flex;
+   font-size: 24px;
+   padding: 30px;
+   margin: 25px;
+   font-family: Arial, Helvetica, sans-serif;
+   justify-content: center;
+}
+
+.educ{
+    background-color: #3f3232;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 24px;
+    padding: 30px;
+    margin: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
+
+
+
+.portbtn{
+    color: black;
+    font-size: 20px;
+    background-color: #fff;
+    margin-left: 20%;
+    border-radius: 4rem;
+    padding: 10px 5px;
+    cursor: pointer;
+    color: var(--yellow); 
+    width: 140px;
+}.portbtn:hover{
+    background:var(--black);
+}
+
+
+.portmain{
+    background-color:darkorange;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+
+
+
+img{
+    max-width: 100%;
+    height: 420px;
+    margin: 5px;
+    margin-top: 10px;
+    padding: 20px;
+    
+}
+
+
+
+
+
+.portbox{
+    margin: 10px;
+}
+
+
+
+.contactbtn{
+    color: black;
+    font-size: 20px;
+    background-color: #fff;
+    margin-left: 35%;
+    border-radius: 4rem;
+    padding: 10px 5px;
+    cursor: pointer;
+    color: var(--yellow); 
+    width: 140px;
+    margin-top: 30px;
+    
+}
+
+
+.contactbtn:hover{
+    background:var(--yellow);
+}
+
+.maincontbox{
+    max-width: 100%;
+    height: 220px;
+
+    font-size: 20px;
+    color: #fff;
+    margin-top: 70px;
+    font-weight: bold;
+    margin-bottom: 100px;
+    font-family: 'poppins',sans-serif;
+    border-radius: 10px;
+    color: var(--yellow);
+}
+
+.maincontbox h5 a {
+    color: #f9ca24;
+    text-decoration: none;
+}
+
+.contact{
+    background-image: url(images/back2.png);
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+}
+
+
+
+
+
+.form-container{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    
+    display: block;
+    
+  
+}
+
+.form-container input, .form-container textarea, .form-container button{
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid linear gradient(#f9ca24 #cf1e1e #007bff #2bbe1e);
+    border-radius: 5px;
+    
+    
+}
+
+
+
+
+
+
+
+
+
+.form-container button{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.form-container button:hover{
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+.contacts{
+            
+            height: 300px;
+            color: #fff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            justify-content: center;
+            
+            
+
+            
+          
+           
+           
+        }
+
+        .maincontbox{
+            margin-bottom: 60px;
+            justify-items: center;
+            
+
+            
+          
+        }
+
+        #whatsapp-link{
+    align-items: center;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+    font-family: Arial, sans-serif;
+    margin-left: 0px;
+    font-size: 23px;
+    width: 50px;
+    
+    
+ 
+}
+
+
+
+.whatsapp-icon{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+
+    
+}
+    
+.mediahandles{
+    display: block;
+    justify-content: center;
+}
+
+.mediahandles h2{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: medium;
+}
+.maincontbox h2 a{
+    color: #fff;
+    text-decoration: none;
+}
+</style>
+
+   
+   
+   
+  <!--header section starts-->
+  <header>
+<div class="user">
+    <img src="images/Graduation cpy.jpg" alt="">
+    <h3 class="Denntoz Musyoka"></h3>
+    <p class="post">Fullstack developer</p>
+
+
+</div>
+<nav class="navbar">
+<ul>
+    
+    <li><a href="#home">home</a></li>
+    <li><a href="#about">about</a></li>
+    <li><a href="#education">education</a></li>
+    <li><a href="#portfolio">portfolio</a></li>
+    <li><a href="#contact">contact</a></li>
+    
+
+</ul>
+
+
+
+</nav>
+
+
+  </header>
+  <!--header section ends-->
+<div id="menu" class="fas fa-bars"></div>
+<div><img src="images/logo1.png" class="logo"></div>
+<!-- home section starts-->
+ <section class="home" id="home">
+    <h3>HI THERE !</h3>
+    <h1>I'M <span>D M K</span></h1>
+    <p>A passionate software engineer based in Nairobi, Kenya. Specialized in web development and Mobile applications.
+        I posseses a robust skill set in HTML, CSS and JAVASCRIPT, enabling me to create dynamic and user-friendly web
+        applications with focus in both Front-end and Back-end development, i strive to deliver high quality solutions that
+        meet user needs and enhance their online experience. My goal is to combine creativity with technical expertise to bring
+        innovative ideas to life.<br> 
+         Feel free to explore my projects and get in touch for collaborations.</p>
+         <p><span>Tagline</span>: Building innovative solutions for the digital age.</p>
+
+ </section>
+   <!-- home section ends-->
+
+   <!--about section starts-->
+   <section class="about" id="about">
+   <a href="#about"><button class="btn">About<i class="fas fa-user"></i></button></a>
+  <div class="all"> 
+<div class="aboutdiv">
+    <p>Name: <span class="name">D M K</span></p>
+    <p>Age: <span class="age">21</span></p>
+    <p>Post: <span class="post">Fullstack Developer</span></p>
+    <p>Language: <span class="language">English</span></p>
+
+</div>
+<div class="box">
+    <p> 1.5+ years of experience</p>
+    <p> 30+ projects completed</p>
+    <p> 5 + Award won</p>
+</div>
+</div>
+
+</section>
+ <!--about section ends-->
+
+<!--education section starts here-->
+<section class="education" id="education">
+<a href="#education"></a><button class="edubtn">Education    <a class="fas fa-graduation-cap"></a></button><i></a>
+
+<div class="edubox">    
+<div class="edu">
+    I honed  my web and mobile application development skills at Helts school of development, where i gained a comprehensive understanding of modern technologies and best practices in the field. My education equipped me with the knowledge to create responsive,user-centric application and tacle complex challenges in software development.<br>
+    Through hands-on projects and collaborative learning,i developed strong foundation in html,css and javascript,along with essential concepts in full-stack development.This experience has empowed me to build innovative solutions and continously improve my craft.
+</div>
+
+<div class="educ">
+    I am currently pursuing a degree in infomation technology at the Technical University of Kenya (TUK). This advanced education complements my foundational skill in web and mobile application development from Helts school of development<br>
+    through my studies am deepening my understanding of emerging technologies,including artificial intelligence,which will anable me to innovate and contribute to the evolving landscape of software engineering.My goal is to leverage this knowledge to create impactiful tech solutions that addresses real-world challenges and enhance user experiences.
+</div>
+
+</div>
+</section>
+<!--education section ends here-->
+
+
+<!--portfolio section starts here-->
+<section class="portfolio" id="portfolio">
+    <a href="#portfolio"></a><button class="portbtn">Portfolio <a class="fas fa-address-book"></a></button><i></a>
+        <div class="portmain">
+<div class=portbox>
+    <img src="images/E-commerce.png">
+    <img src="images/qrcode gen.jpg">
+</div>
+<div class="port2"></div>
+    <img src="images/personal web.jpg">
+    <img src="images/slide1.png">
+</div>
+
+ <div class="portmain">
+    <img src="images/laptop img.png">
+    <img src="images/about qr.jpg">
+    <img src="images/slide2.png">
+ </div>
+
+</div>
+</section>
+ <!--portfolio section ends here-->
+
+
+ <!--contact section starts here-->
+ 
+
+ 
+<section class="contact" id="contact">
+   
+   
+<div class="form-container">
+    <h2><b>Send an E-mail</b></h2>
+   
+    <div id="emailform">
+     <!-- modify this form HTML and place wherever you want yourcontact form form -->
+<form
+action="https://formspree.io/f/manepada"
+method="POST"
+>
+ <input type="text" name="Name" placeholder="Enter your name" required>
+ <input type="email" name="E-mail" placeholder="Enter your E-mail" required>
+  <input type="text" name="Subject" placeholder="Enter your Subject" required>
+  <textarea name="message" placeholder="Enter your Message" required rows="7"></textarea>
+<!-- your other form fields go here -->
+<button type="submit">Send</button>
+</form>
+
+  
+       
+    </div>
+</form>
+
+      <div class="maincontbox">
+        <h5>E-mail: dennixmusyoka1@gmail.com</h5>  
+    <h5><a class="fas fa-phone"></a> <a href="tel:+254716975570">+ 254-716-975-570 </a> </h5>
+    <h5><a class="fas fa-phone"></a> <a href="tel:+254773027724">+ 254-773-027-724</a></h5>
+    
+    
+    </div>
+
+</div>
+
+</section>
+
+
+<div class="mediahandles">
+   <h2>Lets chat</h2>
+    <a href="#" id="whatsapp-link" target="-blank"><img src="https://upload.Wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="whatsapp-icon"></a>
+   
+    </div>
+        </div>
+<!--contact section ends here-->
+
+
+
+
+
+
+
+    <!--jquery cdn link-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--custom js file link-->
+    <script src="index.js"></script>
+    
+</body>
+</html>
